@@ -14,3 +14,5 @@ far future
 postinfinity
 break infinity
 new prestige layers (original
+
+makes use of https://github.com/Razenpok/BreakInfinity.cs
