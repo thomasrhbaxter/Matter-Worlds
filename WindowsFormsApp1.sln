@@ -5,11 +5,6 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WindowsFormsApp1", "WindowsFormsApp1\WindowsFormsApp1.csproj", "{5369F2F7-F6C7-4F80-BF47-83D1B88E8055}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{6AEE21EE-AE15-4315-9E16-4C2DAD892EF8}"
-	ProjectSection(SolutionItems) = preProject
-		WindowsFormsApp1\BigDouble.cs = WindowsFormsApp1\BigDouble.cs
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
-
+using BreakInfinity;
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
@@ -8,49 +8,49 @@ namespace WindowsFormsApp1
 
         #region vars
 
-        private static double antimatterCount = double.MaxValue/2;
+        private static BigDouble antimatterCount = double.MaxValue/2;
 
-        private static Int64 aw1 = 0;
-        private static Int64 aw2 = 0;
-        private static Int64 aw3 = 0;
-        private static Int64 aw4 = 0;
-        private static Int64 aw5 = 0;
-        private static Int64 aw6 = 0;
-        private static Int64 aw7 = 0;
-        private static Int64 aw8 = 0;
+        private static BigDouble aw1 = 0;
+        private static BigDouble aw2 = 0;
+        private static BigDouble aw3 = 0;
+        private static BigDouble aw4 = 0;
+        private static BigDouble aw5 = 0;
+        private static BigDouble aw6 = 0;
+        private static BigDouble aw7 = 0;
+        private static BigDouble aw8 = 0;
 
         private static int dimBoostsBought;
-        private static double dimBoostC = 0;
+        private static BigDouble dimBoostC = 0;
 
-        private static Int64 dimGalaxy = 0;
-        private static double dimGalaxyC = 0;
+        private static int dimGalaxy = 0;
+        private static BigDouble dimGalaxyC = 0;
 
-        private static double aw1m = 1;
-        private static double aw2m = 1;
-        private static double aw3m = 1;
-        private static double aw4m = 1;
-        private static double aw5m = 1;
-        private static double aw6m = 1;
-        private static double aw7m = 1;
-        private static double aw8m = 1;
+        private static BigDouble aw1m = 1;
+        private static BigDouble aw2m = 1;
+        private static BigDouble aw3m = 1;
+        private static BigDouble aw4m = 1;
+        private static BigDouble aw5m = 1;
+        private static BigDouble aw6m = 1;
+        private static BigDouble aw7m = 1;
+        private static BigDouble aw8m = 1;
 
-        private static double aw1dbm = 1;
-        private static double aw2dbm = 1;
-        private static double aw3dbm = 1;
-        private static double aw4dbm = 1;
-        private static double aw5dbm = 1;
-        private static double aw6dbm = 1;
-        private static double aw7dbm = 1;
-        private static double aw8dbm = 1;
+        private static BigDouble aw1dbm = 1;
+        private static BigDouble aw2dbm = 1;
+        private static BigDouble aw3dbm = 1;
+        private static BigDouble aw4dbm = 1;
+        private static BigDouble aw5dbm = 1;
+        private static BigDouble aw6dbm = 1;
+        private static BigDouble aw7dbm = 1;
+        private static BigDouble aw8dbm = 1;
 
-        private static double aw1c = 10;
-        private static double aw2c = 100;
-        private static double aw3c = 1000;
-        private static double aw4c = 10000;
-        private static double aw5c = 100000;
-        private static double aw6c = 1000000;
-        private static double aw7c = 10000000;
-        private static double aw8c = 100000000;
+        private static BigDouble aw1c = 10;
+        private static BigDouble aw2c = 100;
+        private static BigDouble aw3c = 1000;
+        private static BigDouble aw4c = 10000;
+        private static BigDouble aw5c = 100000;
+        private static BigDouble aw6c = 1000000;
+        private static BigDouble aw7c = 10000000;
+        private static BigDouble aw8c = 100000000;
 
         private static double aw1Bought;
         private static double aw2Bought;
@@ -456,14 +456,14 @@ namespace WindowsFormsApp1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            aw7 += aw8 * (Int64)aw8m * (Int64)aw8dbm;
-            aw6 += aw7 * (Int64)aw7m * (Int64)aw7dbm;
-            aw5 += aw6 * (Int64)aw6m * (Int64)aw6dbm;
-            aw4 += aw5 * (Int64)aw5m* (Int64)aw5dbm;
-            aw3 += aw4 * (Int64)aw4m* (Int64)aw4dbm;
-            aw2 += aw3 * (Int64)aw3m * (Int64)aw3dbm;
-            aw1 += aw2 * (Int64)aw2m* (Int64)aw2dbm;
-            antimatterCount += aw1 * (Int64)aw1m * (Int64)aw1dbm;
+            aw7 += aw8 * aw8m * aw8dbm;
+            aw6 += aw7 * aw7m * aw7dbm;
+            aw5 += aw6 * aw6m * aw6dbm;
+            aw4 += aw5 * aw5m* aw5dbm;
+            aw3 += aw4 * aw4m* aw4dbm;
+            aw2 += aw3 * aw3m * aw3dbm;
+            aw1 += aw2 * aw2m* aw2dbm;
+            antimatterCount += aw1 * aw1m * aw1dbm;
         }
 
         private void timer2_Tick(object sender, EventArgs e)
