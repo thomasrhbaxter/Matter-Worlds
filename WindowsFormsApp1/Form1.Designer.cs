@@ -34,6 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.infinity_button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.sacrificeBuy = new System.Windows.Forms.Button();
             this.galaxyCost = new System.Windows.Forms.Label();
             this.dimBoostCost = new System.Windows.Forms.Label();
             this.galaxyBuy = new System.Windows.Forms.Button();
@@ -89,6 +90,7 @@
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.sacrificeBuy);
             this.panel2.Controls.Add(this.galaxyCost);
             this.panel2.Controls.Add(this.dimBoostCost);
             this.panel2.Controls.Add(this.galaxyBuy);
@@ -115,10 +117,22 @@
             this.panel2.Size = new System.Drawing.Size(579, 478);
             this.panel2.TabIndex = 20;
             // 
+            // sacrificeBuy
+            // 
+            this.sacrificeBuy.Enabled = false;
+            this.sacrificeBuy.Location = new System.Drawing.Point(12, 7);
+            this.sacrificeBuy.Name = "sacrificeBuy";
+            this.sacrificeBuy.Size = new System.Drawing.Size(140, 38);
+            this.sacrificeBuy.TabIndex = 42;
+            this.sacrificeBuy.Text = "button9";
+            this.sacrificeBuy.UseVisualStyleBackColor = true;
+            this.sacrificeBuy.Visible = false;
+            this.sacrificeBuy.Click += new System.EventHandler(this.sacrificeBuy_Click);
+            // 
             // galaxyCost
             // 
             this.galaxyCost.AutoSize = true;
-            this.galaxyCost.Location = new System.Drawing.Point(398, 404);
+            this.galaxyCost.Location = new System.Drawing.Point(327, 404);
             this.galaxyCost.Name = "galaxyCost";
             this.galaxyCost.Size = new System.Drawing.Size(101, 13);
             this.galaxyCost.TabIndex = 41;
@@ -127,7 +141,7 @@
             // dimBoostCost
             // 
             this.dimBoostCost.AutoSize = true;
-            this.dimBoostCost.Location = new System.Drawing.Point(70, 404);
+            this.dimBoostCost.Location = new System.Drawing.Point(29, 404);
             this.dimBoostCost.Name = "dimBoostCost";
             this.dimBoostCost.Size = new System.Drawing.Size(84, 13);
             this.dimBoostCost.TabIndex = 40;
@@ -135,9 +149,9 @@
             // 
             // galaxyBuy
             // 
-            this.galaxyBuy.Location = new System.Drawing.Point(401, 420);
+            this.galaxyBuy.Location = new System.Drawing.Point(330, 420);
             this.galaxyBuy.Name = "galaxyBuy";
-            this.galaxyBuy.Size = new System.Drawing.Size(139, 42);
+            this.galaxyBuy.Size = new System.Drawing.Size(231, 42);
             this.galaxyBuy.TabIndex = 39;
             this.galaxyBuy.Text = "Boost universe";
             this.galaxyBuy.UseVisualStyleBackColor = true;
@@ -145,11 +159,11 @@
             // 
             // boostBuy
             // 
-            this.boostBuy.Location = new System.Drawing.Point(64, 420);
+            this.boostBuy.Location = new System.Drawing.Point(23, 420);
             this.boostBuy.Name = "boostBuy";
-            this.boostBuy.Size = new System.Drawing.Size(139, 42);
+            this.boostBuy.Size = new System.Drawing.Size(215, 42);
             this.boostBuy.TabIndex = 38;
-            this.boostBuy.Text = "Boost world";
+            this.boostBuy.Text = "reset worlds to unlock the next world";
             this.boostBuy.UseVisualStyleBackColor = true;
             this.boostBuy.Click += new System.EventHandler(this.boostBuy_Click);
             // 
@@ -165,7 +179,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(143, 10);
+            this.label10.Location = new System.Drawing.Point(194, 12);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 13);
             this.label10.TabIndex = 37;
@@ -365,6 +379,7 @@
         private System.Windows.Forms.Button boostBuy;
         private System.Windows.Forms.Label dimBoostCost;
         private System.Windows.Forms.Label galaxyCost;
+        private System.Windows.Forms.Button sacrificeBuy;
     }
 }
 

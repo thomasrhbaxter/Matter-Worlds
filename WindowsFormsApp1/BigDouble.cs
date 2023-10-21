@@ -623,6 +623,8 @@ namespace BreakInfinity
             return Log(value, @base.ToDouble());
         }
 
+        
+
         public static double Log(BigDouble value, double @base)
         {
             if (IsZero(@base))
