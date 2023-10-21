@@ -1,206 +1,60 @@
 ﻿using System;
 using System.Windows.Forms;
 using BreakInfinity;
-namespace WindowsFormsApp1
+using MatterWorlds.Control;
+namespace MatterWorlds.UserInterface
 {
-    public partial class Form1 : Form
+    public partial class UI : Form
     {
-        private bool canSacrifice;
-
-
-        #region vars
-
-        private static BigDouble antimatterCount = new BigDouble(1,4000);
-        private static BigDouble startingAntimatter = 10;
-        private static BigDouble debugAntimatter = new BigDouble(1,4000);
-
-        #region Antimatter worlds
-
-        private static BigDouble aw1 = 0;
-        private static BigDouble aw2 = 0;
-        private static BigDouble aw3 = 0;
-        private static BigDouble aw4 = 0;
-        private static BigDouble aw5 = 0;
-        private static BigDouble aw6 = 0;
-        private static BigDouble aw7 = 0;
-        private static BigDouble aw8 = 0;
-
-        private static BigDouble aw1m = 1;
-        private static BigDouble aw2m = 1;
-        private static BigDouble aw3m = 1;
-        private static BigDouble aw4m = 1;
-        private static BigDouble aw5m = 1;
-        private static BigDouble aw6m = 1;
-        private static BigDouble aw7m = 1;
-        private static BigDouble aw8m = 1;
-
-        private static BigDouble aw1dbm = 1;
-        private static BigDouble aw2dbm = 1;
-        private static BigDouble aw3dbm = 1;
-        private static BigDouble aw4dbm = 1;
-        private static BigDouble aw5dbm = 1;
-        private static BigDouble aw6dbm = 1;
-        private static BigDouble aw7dbm = 1;
-        private static BigDouble aw8dbm = 1;
-
-        private static BigDouble aw1c = 10;
-        private static BigDouble aw2c = 100;
-        private static BigDouble aw3c = 1000;
-        private static BigDouble aw4c = 10000;
-        private static BigDouble aw5c = 100000;
-        private static BigDouble aw6c = 1000000;
-        private static BigDouble aw7c = 10000000;
-        private static BigDouble aw8c = 100000000;
-
-        private static double aw1Bought;
-        private static double aw2Bought;
-        private static double aw3Bought;
-        private static double aw4Bought;
-        private static double aw5Bought;
-        private static double aw6Bought;
-        private static double aw7Bought;
-        private static double aw8Bought;
-
-        #endregion
-
-        private static BigDouble sacrificeMultiply = 1;
-
-        private static int dimBoostsBought;
-        private static BigDouble dimBoostC = 0;
-
-        private static int dimGalaxy = 0;
-        private static BigDouble dimGalaxyC = 0;
-
-        private string dimBoostsCostString = "20 4th worlds";
-        private static string exponentFormat = "G3";
-
-        private static BigDouble totalDim1;
-        private static BigDouble previousTotalDim1;
-
-        #endregion
-        public Form1()
+        public UI()
         {
             InitializeComponent();
             timer1.Enabled = true;
             timer2.Enabled = true;
+            CoreControl.OnRun();
+            CoreControl.InfiniteReset();
             
         }
         #region reset
 
-        private void InfiniteReset()
+        public  void ResetUI()
         {
-            dimGalaxy = 0;
-            dimGalaxyC = 0;
-            GalaxyReset();
-        }
-
-        private void GalaxyReset()
-            {
-            aw1dbm = 1;
-            aw2dbm = 1;
-            aw3dbm = 1;
-            aw4dbm = 1;
-            aw5dbm = 1;
-            aw6dbm = 1;
-            aw7dbm = 1;
-            aw8dbm = 1;
-
-            dimBoostC = 0;
-            dimBoostsBought = 0;
-            dimBoostsCostString = "";
-            canSacrifice = false;
-
             button5.Enabled = false;
             button6.Enabled = false;
             button7.Enabled = false;
             button8.Enabled = false;
             sacrificeBuy.Enabled = false;
-            totalDim1 = 0;
-            previousTotalDim1 = 0;
-            ResetVariables();
-    }
-
-        private void ResetVariables()
-        {
-            //antimatterCount = startingAntimatter;
-            antimatterCount = debugAntimatter;
-            aw1 = 0;
-            aw2 = 0;
-            aw3 = 0;
-            aw4 = 0;
-            aw5 = 0;
-            aw6 = 0;
-            aw7 = 0;
-            aw8 = 0;
-
-            aw1Bought = 0;
-            aw2Bought = 0;
-            aw3Bought = 0;
-            aw4Bought = 0;
-            aw5Bought = 0;
-            aw6Bought = 0;
-            aw7Bought = 0;
-            aw8Bought = 0;
-
-            sacrificeMultiply = 1;
-
-            aw1m = 1;
-            aw2m = 1;
-            aw3m = 1;
-            aw4m = 1;
-            aw5m = 1;
-            aw6m = 1;
-            aw7m = 1;
-            aw8m = 1;
-
-            aw1c = 10;
-            aw2c = 100;
-            aw3c = 1000;
-            aw4c = 10000;
-            aw5c = 100000;
-            aw6c = 1000000;
-            aw7c = 10000000;
-            aw8c = 100000000;
         }
+
         #endregion
-
-        private void sacrifice()
-        {
-            aw1 = 0;
-            aw2 = 0;
-            aw3 = 0;
-            aw4 = 0;
-            aw5 = 0;
-            aw6 = 0;
-            aw7 = 0;
-            previousTotalDim1 = totalDim1;
-            aw8dbm *= sacrificeMultiply;
-        }
 
         private void RefreshUI()
         {
-            label1.Text = "World 1 count: " + aw1.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw1m * aw1dbm).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
-            label2.Text = "World 2 count: " + aw2.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw2m * aw2dbm).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
-            label3.Text = "World 3 count: " + aw3.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw3m * aw3dbm).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
-            label4.Text = "World 4 count: " + aw4.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw4m * aw4dbm).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
-            label5.Text = "World 5 count: " + aw5.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw5m * aw5dbm).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
-            label6.Text = "World 6 count: " + aw6.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw6m * aw6dbm).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
-            label7.Text = "World 7 count: " + aw7.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw7m * aw7dbm).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
-            label8.Text = "World 8 count: " + aw8.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw8m * aw8dbm).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
+            label1.Text = "World 1 count: " + aw1.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw1m * aw1dbm * tickSpeedMult).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
+            label2.Text = "World 2 count: " + aw2.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw2m * aw2dbm * tickSpeedMult).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
+            label3.Text = "World 3 count: " + aw3.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw3m * aw3dbm * tickSpeedMult).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
+            label4.Text = "World 4 count: " + aw4.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw4m * aw4dbm * tickSpeedMult).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
+            label5.Text = "World 5 count: " + aw5.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw5m * aw5dbm * tickSpeedMult).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
+            label6.Text = "World 6 count: " + aw6.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw6m * aw6dbm * tickSpeedMult).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
+            label7.Text = "World 7 count: " + aw7.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw7m * aw7dbm * tickSpeedMult).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
+            label8.Text = "World 8 count: " + aw8.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " Multiplier: " + (aw8m * aw8dbm * totalSacrificeMultiply * tickSpeedMult).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
             label10.Text = "Antimatter: " + antimatterCount.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + "\nAntimatter per second: " + (aw1 * aw1m * aw1dbm).ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
 
-            button1.Text = "Buy world 1: " + aw1c;
-            button2.Text = "Buy world 2: " + aw2c;
-            button3.Text = "Buy world 3: " + aw3c;
-            button4.Text = "Buy world 4: " + aw4c;
-            button5.Text = "Buy world 5: " + aw5c;
-            button6.Text = "Buy world 6: " + aw6c;
-            button7.Text = "Buy world 7: " + aw7c;
-            button8.Text = "Buy world 8: " + aw8c;
+            button1.Text = "Buy world 1: " + aw1c.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " " + aw1Bought %10;
+            button2.Text = "Buy world 2: " + aw2c.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " " + aw2Bought % 10;
+            button3.Text = "Buy world 3: " + aw3c.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " " + aw3Bought % 10;
+            button4.Text = "Buy world 4: " + aw4c.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " " + aw4Bought % 10;
+            button5.Text = "Buy world 5: " + aw5c.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " " + aw5Bought % 10;
+            button6.Text = "Buy world 6: " + aw6c.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " " + aw6Bought % 10;
+            button7.Text = "Buy world 7: " + aw7c.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " " + aw7Bought % 10;
+            button8.Text = "Buy world 8: " + aw8c.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " " + aw8Bought % 10;
 
-            sacrificeBuy.Text = "Reset  world 1-7 for a " + sacrificeMultiply + "x multiplier";
+            label9.Text = "Tickspeed multiplier:" + tickSpeedMult;
+            TickSpeedBuy.Text = "Get a " + tickSpeedMultScale.ToString("G4").Replace("+", "").Replace("E0", "E") + " modifier to all worlds\nCost: " + tickSpeedC.ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
 
-            galaxyCost.Text = "Universe boost cost: " + dimGalaxyC;
+            sacrificeBuy.Text = "Reset  world 1-7 for a " + sacrificeMultiply.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + "x multiplier";
+
+            galaxyCost.Text = "Universe boost cost: " + dimGalaxyC.ToString(exponentFormat).Replace("+", "").Replace("E0", "E");
             
             if (dimBoostsBought >= 7)
             {
@@ -216,7 +70,7 @@ namespace WindowsFormsApp1
             }
             else
             {
-                dimBoostCost.Text = "World boost cost: " + dimBoostC + " 8th dimensions";
+                dimBoostCost.Text = "World boost cost: " + dimBoostC.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " 8th dimensions";
             }
         }
 
@@ -371,9 +225,23 @@ namespace WindowsFormsApp1
             }
         }
 
+        private void TickSpeedBuy_Click(object sender, EventArgs e)
+        {
+            if (antimatterCount >= tickSpeedC)
+            {
+                antimatterCount -= tickSpeedC;
+                tickSpeedC *= 10;
+                tickSpeedMult *= tickSpeedMultScale;
+            }
+        }
+
         private void galaxyBuy_Click(object sender, EventArgs e)
         {
-            GalaxyReset();
+            if (aw8 > dimGalaxyC)
+            {
+                tickSpeedMultScale *= 1.02;
+                GalaxyReset();
+            }
         }
 
         private void sacrificeBuy_Click(object sender, EventArgs e)
@@ -526,17 +394,20 @@ namespace WindowsFormsApp1
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            aw7 += aw8 * aw8m * aw8dbm;
-            aw6 += aw7 * aw7m * aw7dbm;
-            aw5 += aw6 * aw6m * aw6dbm;
-            aw4 += aw5 * aw5m* aw5dbm;
-            aw3 += aw4 * aw4m* aw4dbm;
-            aw2 += aw3 * aw3m * aw3dbm;
-            aw1 += aw2 * aw2m* aw2dbm;
+            aw7 += aw8 * aw8m * aw8dbm * totalSacrificeMultiply * tickSpeedMult;
+            aw6 += aw7 * aw7m * aw7dbm * tickSpeedMult;
+            aw5 += aw6 * aw6m * aw6dbm * tickSpeedMult;
+            aw4 += aw5 * aw5m* aw5dbm * tickSpeedMult;
+            aw3 += aw4 * aw4m* aw4dbm * tickSpeedMult;
+            aw2 += aw3 * aw3m * aw3dbm * tickSpeedMult;
+            aw1 += aw2 * aw2m* aw2dbm * tickSpeedMult;
             totalDim1 += aw1;
             antimatterCount += aw1 * aw1m * aw1dbm;
-            //sacrificeMultiply = (BigDouble.Log(totalDim1-previousTotalDim1, 1)/10) * (BigDouble.Log(totalDim1 - previousTotalDim1, 1) / 10);
-            sacrificeMultiply = Math.Log(totalDim1.ToDouble()/ 10) * Math.Log(totalDim1.ToDouble()/ 10);
+
+            sacrificeMultiply = BigDouble.Max(BigDouble.Pow(BigDouble.Log(totalDim1 - previousTotalDim1, 10) / 10, sacrificeExponent), 1);
+            
+            
+
         }
 
         private void timer2_Tick(object sender, EventArgs e)

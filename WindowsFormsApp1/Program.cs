@@ -3,8 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MatterWorlds.UserInterface;
 
-namespace WindowsFormsApp1
+namespace MatterWorlds
 {
     internal static class Program
     {
@@ -16,7 +17,7 @@ namespace WindowsFormsApp1
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new UI());
         }
     }
 }
