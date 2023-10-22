@@ -46,21 +46,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AutoBuyers.cs" />
+    <Compile Include="Automation\AutoBuyers.cs" />
     <Compile Include="BigDouble.cs" />
-    <Compile Include="InfinityPurchaseControls.cs" />
-    <Compile Include="CoreControl.cs" />
-    <Compile Include="TickUpdate.cs" />
-    <Compile Include="UI.cs">
+    <Compile Include="Control\InfinityPurchaseControls.cs" />
+    <Compile Include="Control\PanelsMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="UI.Designer.cs">
-      <DependentUpon>UI.cs</DependentUpon>
+    <Compile Include="Control\TickUpdate.cs" />
+    <Compile Include="User Interface\CoreControl.cs">
+      <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="User Interface\CoreControl.Designer.cs">
+      <DependentUpon>CoreControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Control\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="UI.resx">
-      <DependentUpon>UI.cs</DependentUpon>
+    <EmbeddedResource Include="User Interface\CoreControl.resx">
+      <DependentUpon>CoreControl.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -71,6 +73,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

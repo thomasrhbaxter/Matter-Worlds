@@ -1,7 +1,7 @@
 ﻿
-namespace MatterWorlds.UserInterface
+namespace MatterWorlds.Control
 {
-    partial class UI
+    partial class CoreControl
     {
         /// <summary>
         /// Required designer variable.
@@ -33,15 +33,17 @@ namespace MatterWorlds.UserInterface
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.automator_button = new System.Windows.Forms.Button();
             this.infinity_button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.sacrificeBuy = new System.Windows.Forms.Button();
+            this.label9 = new System.Windows.Forms.Label();
             this.galaxyCost = new System.Windows.Forms.Label();
+            this.TickSpeedBuy = new System.Windows.Forms.Button();
+            this.sacrificeBuy = new System.Windows.Forms.Button();
             this.dimBoostCost = new System.Windows.Forms.Label();
             this.galaxyBuy = new System.Windows.Forms.Button();
             this.boostBuy = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.button8 = new System.Windows.Forms.Button();
@@ -57,10 +59,23 @@ namespace MatterWorlds.UserInterface
             this.button3 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
-            this.TickSpeedBuy = new System.Windows.Forms.Button();
-            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.Dim1Automator = new System.Windows.Forms.Timer(this.components);
+            this.Dim2Automater = new System.Windows.Forms.Timer(this.components);
+            this.Dim3Automator = new System.Windows.Forms.Timer(this.components);
+            this.Dim4Automator = new System.Windows.Forms.Timer(this.components);
+            this.Dim5Automator = new System.Windows.Forms.Timer(this.components);
+            this.Dim6Automator = new System.Windows.Forms.Timer(this.components);
+            this.Dim7Automator = new System.Windows.Forms.Timer(this.components);
+            this.Dim8Automator = new System.Windows.Forms.Timer(this.components);
+            this.BoostAutomator = new System.Windows.Forms.Timer(this.components);
+            this.GalaxyAutomator = new System.Windows.Forms.Timer(this.components);
+            this.TickspeedAutomator = new System.Windows.Forms.Timer(this.components);
+            this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
             this.SuspendLayout();
             // 
             // timer1
@@ -75,12 +90,24 @@ namespace MatterWorlds.UserInterface
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.automator_button);
             this.panel1.Controls.Add(this.infinity_button);
             this.panel1.Location = new System.Drawing.Point(20, 28);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(255, 800);
             this.panel1.TabIndex = 19;
+            // 
+            // automator_button
+            // 
+            this.automator_button.Location = new System.Drawing.Point(6, 117);
+            this.automator_button.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.automator_button.Name = "automator_button";
+            this.automator_button.Size = new System.Drawing.Size(244, 75);
+            this.automator_button.TabIndex = 1;
+            this.automator_button.Text = "Autobuyers";
+            this.automator_button.UseVisualStyleBackColor = true;
+            this.automator_button.Click += new System.EventHandler(this.automator_button_Click);
             // 
             // infinity_button
             // 
@@ -97,7 +124,10 @@ namespace MatterWorlds.UserInterface
             // 
             this.panel2.AutoScroll = true;
             this.panel2.AutoScrollMargin = new System.Drawing.Size(0, 30);
+            this.panel2.Controls.Add(this.label9);
             this.panel2.Controls.Add(this.galaxyCost);
+            this.panel2.Controls.Add(this.TickSpeedBuy);
+            this.panel2.Controls.Add(this.sacrificeBuy);
             this.panel2.Controls.Add(this.dimBoostCost);
             this.panel2.Controls.Add(this.galaxyBuy);
             this.panel2.Controls.Add(this.boostBuy);
@@ -117,24 +147,20 @@ namespace MatterWorlds.UserInterface
             this.panel2.Controls.Add(this.button3);
             this.panel2.Controls.Add(this.label8);
             this.panel2.Controls.Add(this.button2);
-            this.panel2.Location = new System.Drawing.Point(298, 134);
+            this.panel2.Location = new System.Drawing.Point(298, 60);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(868, 694);
+            this.panel2.Size = new System.Drawing.Size(868, 768);
             this.panel2.TabIndex = 20;
             // 
-            // sacrificeBuy
+            // label9
             // 
-            this.sacrificeBuy.Enabled = false;
-            this.sacrificeBuy.Location = new System.Drawing.Point(329, 66);
-            this.sacrificeBuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.sacrificeBuy.Name = "sacrificeBuy";
-            this.sacrificeBuy.Size = new System.Drawing.Size(210, 58);
-            this.sacrificeBuy.TabIndex = 42;
-            this.sacrificeBuy.Text = "sacrifice";
-            this.sacrificeBuy.UseVisualStyleBackColor = true;
-            this.sacrificeBuy.Visible = false;
-            this.sacrificeBuy.Click += new System.EventHandler(this.sacrificeBuy_Click);
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(569, 662);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(51, 20);
+            this.label9.TabIndex = 44;
+            this.label9.Text = "label9";
             // 
             // galaxyCost
             // 
@@ -145,6 +171,30 @@ namespace MatterWorlds.UserInterface
             this.galaxyCost.Size = new System.Drawing.Size(149, 20);
             this.galaxyCost.TabIndex = 41;
             this.galaxyCost.Text = "Universe boost cost";
+            // 
+            // TickSpeedBuy
+            // 
+            this.TickSpeedBuy.Location = new System.Drawing.Point(528, 687);
+            this.TickSpeedBuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.TickSpeedBuy.Name = "TickSpeedBuy";
+            this.TickSpeedBuy.Size = new System.Drawing.Size(279, 58);
+            this.TickSpeedBuy.TabIndex = 43;
+            this.TickSpeedBuy.Text = "Tickspeed++";
+            this.TickSpeedBuy.UseVisualStyleBackColor = true;
+            this.TickSpeedBuy.Click += new System.EventHandler(this.TickSpeedBuy_Click);
+            // 
+            // sacrificeBuy
+            // 
+            this.sacrificeBuy.Enabled = false;
+            this.sacrificeBuy.Location = new System.Drawing.Point(93, 687);
+            this.sacrificeBuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.sacrificeBuy.Name = "sacrificeBuy";
+            this.sacrificeBuy.Size = new System.Drawing.Size(210, 58);
+            this.sacrificeBuy.TabIndex = 42;
+            this.sacrificeBuy.Text = "sacrifice";
+            this.sacrificeBuy.UseVisualStyleBackColor = true;
+            this.sacrificeBuy.Visible = false;
+            this.sacrificeBuy.Click += new System.EventHandler(this.sacrificeBuy_Click);
             // 
             // dimBoostCost
             // 
@@ -187,16 +237,6 @@ namespace MatterWorlds.UserInterface
             this.label1.Size = new System.Drawing.Size(63, 20);
             this.label1.TabIndex = 20;
             this.label1.Text = "World 1";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(571, 28);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(91, 20);
-            this.label10.TabIndex = 37;
-            this.label10.Text = "Antimatter: ";
             // 
             // button1
             // 
@@ -364,43 +404,51 @@ namespace MatterWorlds.UserInterface
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.buy2_Click);
             // 
-            // TickSpeedBuy
+            // label10
             // 
-            this.TickSpeedBuy.Location = new System.Drawing.Point(857, 66);
-            this.TickSpeedBuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.TickSpeedBuy.Name = "TickSpeedBuy";
-            this.TickSpeedBuy.Size = new System.Drawing.Size(279, 58);
-            this.TickSpeedBuy.TabIndex = 43;
-            this.TickSpeedBuy.Text = "Tickspeed++";
-            this.TickSpeedBuy.UseVisualStyleBackColor = true;
-            this.TickSpeedBuy.Click += new System.EventHandler(this.TickSpeedBuy_Click);
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(571, 28);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 20);
+            this.label10.TabIndex = 37;
+            this.label10.Text = "Antimatter: ";
             // 
-            // label9
+            // Dim1Automator
             // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(893, 41);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(51, 20);
-            this.label9.TabIndex = 44;
-            this.label9.Text = "label9";
+            this.Dim1Automator.Tick += new System.EventHandler(this.Automator_Tick);
             // 
-            // Form1
+            // fileSystemWatcher1
+            // 
+            this.fileSystemWatcher1.EnableRaisingEvents = true;
+            this.fileSystemWatcher1.SynchronizingObject = this;
+            // 
+            // panel3
+            // 
+            this.panel3.AutoScroll = true;
+            this.panel3.AutoScrollMargin = new System.Drawing.Size(0, 30);
+            this.panel3.Location = new System.Drawing.Point(298, 60);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(868, 768);
+            this.panel3.TabIndex = 45;
+            // 
+            // CoreControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1194, 842);
-            this.Controls.Add(this.label9);
-            this.Controls.Add(this.TickSpeedBuy);
-            this.Controls.Add(this.sacrificeBuy);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.label10);
+            this.Controls.Add(this.panel3);
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.Name = "Form1";
+            this.Name = "CoreControl";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -436,6 +484,20 @@ namespace MatterWorlds.UserInterface
         private System.Windows.Forms.Button sacrificeBuy;
         private System.Windows.Forms.Button TickSpeedBuy;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Timer Dim1Automator;
+        private System.Windows.Forms.Timer Dim2Automater;
+        private System.Windows.Forms.Timer Dim3Automator;
+        private System.Windows.Forms.Timer Dim4Automator;
+        private System.Windows.Forms.Timer Dim5Automator;
+        private System.Windows.Forms.Timer Dim6Automator;
+        private System.Windows.Forms.Timer Dim7Automator;
+        private System.Windows.Forms.Timer Dim8Automator;
+        private System.Windows.Forms.Timer BoostAutomator;
+        private System.Windows.Forms.Timer GalaxyAutomator;
+        private System.Windows.Forms.Timer TickspeedAutomator;
+        private System.Windows.Forms.Button automator_button;
+        private System.IO.FileSystemWatcher fileSystemWatcher1;
+        private System.Windows.Forms.Panel panel3;
     }
 }
 

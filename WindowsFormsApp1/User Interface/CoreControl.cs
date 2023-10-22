@@ -1,29 +1,181 @@
 ﻿using System;
 using System.Windows.Forms;
 using BreakInfinity;
-using MatterWorlds.Control;
-namespace MatterWorlds.UserInterface
+using MatterWorlds.Automation;
+namespace MatterWorlds.Control
 {
-    public partial class UI : Form
+    public partial class CoreControl : Form
     {
-        public UI()
+
+        public static bool canSacrifice;
+        public static BigDouble antimatterCount = 10;
+        public static BigDouble startingAntimatter = 10;
+        public static BigDouble debugAntimatter = new BigDouble(1, 4000);
+
+        #region worlds
+        public static BigDouble aw1 = 0;
+        public static BigDouble aw2 = 0;
+        public static BigDouble aw3 = 0;
+        public static BigDouble aw4 = 0;
+        public static BigDouble aw5 = 0;
+        public static BigDouble aw6 = 0;
+        public static BigDouble aw7 = 0;
+        public static BigDouble aw8 = 0;
+
+        public static BigDouble aw1m = 1;
+        public static BigDouble aw2m = 1;
+        public static BigDouble aw3m = 1;
+        public static BigDouble aw4m = 1;
+        public static BigDouble aw5m = 1;
+        public static BigDouble aw6m = 1;
+        public static BigDouble aw7m = 1;
+        public static BigDouble aw8m = 1;
+
+        public static BigDouble aw1dbm = 1;
+        public static BigDouble aw2dbm = 1;
+        public static BigDouble aw3dbm = 1;
+        public static BigDouble aw4dbm = 1;
+        public static BigDouble aw5dbm = 1;
+        public static BigDouble aw6dbm = 1;
+        public static BigDouble aw7dbm = 1;
+        public static BigDouble aw8dbm = 1;
+
+        public static BigDouble aw1c = 10;
+        public static BigDouble aw2c = 100;
+        public static BigDouble aw3c = 1000;
+        public static BigDouble aw4c = 10000;
+        public static BigDouble aw5c = 100000;
+        public static BigDouble aw6c = 1000000;
+        public static BigDouble aw7c = 10000000;
+        public static BigDouble aw8c = 100000000;
+
+        public static double aw1Bought;
+        public static double aw2Bought;
+        public static double aw3Bought;
+        public static double aw4Bought;
+        public static double aw5Bought;
+        public static double aw6Bought;
+        public static double aw7Bought;
+        public static double aw8Bought;
+        #endregion
+
+        public static BigDouble totalDim1;
+        public static BigDouble previousTotalDim1;
+
+        public static BigDouble totalSacrificeMultiply = 1;
+        public static BigDouble sacrificeMultiply = 1;
+        public static BigDouble sacrificeExponent = 2;
+
+        public static int dimBoostsBought;
+        public static BigDouble dimBoostC = 0;
+
+        public static int dimGalaxy = 0;
+        public static BigDouble dimGalaxyC = 80;
+
+        public static string dimBoostsCostString = "20 4th worlds";
+
+
+        public static BigDouble tickSpeedMult = 1;
+        public static BigDouble tickSpeedC = 1000;
+        public static BigDouble tickSpeedMultScale = 1.125;
+
+        private static string exponentFormat = "G3";
+        public CoreControl()
         {
             InitializeComponent();
+            Init();
             timer1.Enabled = true;
             timer2.Enabled = true;
-            CoreControl.OnRun();
-            CoreControl.InfiniteReset();
+            InfiniteReset();
             
         }
         #region reset
-
-        public  void ResetUI()
+        public void InfiniteReset()
         {
+            dimGalaxy = 0;
+            dimGalaxyC = 80;
+            tickSpeedMultScale = 1.125;
+            GalaxyReset();
+        }
+
+        public void GalaxyReset()
+        {
+            aw1dbm = 1;
+            aw2dbm = 1;
+            aw3dbm = 1;
+            aw4dbm = 1;
+            aw5dbm = 1;
+            aw6dbm = 1;
+            aw7dbm = 1;
+            aw8dbm = 1;
+
             button5.Enabled = false;
             button6.Enabled = false;
             button7.Enabled = false;
             button8.Enabled = false;
             sacrificeBuy.Enabled = false;
+
+            dimBoostC = 0;
+            dimBoostsBought = 0;
+            dimBoostsCostString = "";
+            canSacrifice = false;
+
+            totalDim1 = 0;
+            previousTotalDim1 = 0;
+            ResetVariables();
+        }
+
+        public static void ResetVariables()
+        {
+
+            tickSpeedC = 1000;
+            tickSpeedMult = 1;
+            //antimatterCount = startingAntimatter;
+            antimatterCount = debugAntimatter;
+            aw1 = 0;
+            aw2 = 0;
+            aw3 = 0;
+            aw4 = 0;
+            aw5 = 0;
+            aw6 = 0;
+            aw7 = 0;
+            aw8 = 0;
+
+            aw1Bought = 0;
+            aw2Bought = 0;
+            aw3Bought = 0;
+            aw4Bought = 0;
+            aw5Bought = 0;
+            aw6Bought = 0;
+            aw7Bought = 0;
+            aw8Bought = 0;
+
+            sacrificeMultiply = 1;
+            totalSacrificeMultiply = 1;
+
+
+            aw1m = 1;
+            aw2m = 1;
+            aw3m = 1;
+            aw4m = 1;
+            aw5m = 1;
+            aw6m = 1;
+            aw7m = 1;
+            aw8m = 1;
+
+            aw1c = 10;
+            aw2c = 100;
+            aw3c = 1000;
+            aw4c = 10000;
+            aw5c = 100000;
+            aw6c = 1000000;
+            aw7c = 10000000;
+            aw8c = 100000000;
+        }
+        public void ResetUI()
+        {
+
+            
         }
 
         #endregion
@@ -78,19 +230,7 @@ namespace MatterWorlds.UserInterface
         #region buttons
 
         #region navmenu
-        private void infinityMenu_Click(object sender, EventArgs e)
-        {
-            if (panel2.Enabled)
-            {
-                panel2.Enabled = false;
-                panel2.Visible = false;
-            }
-            else
-            {
-                panel2.Enabled = true;
-                panel2.Visible = true;
-            }
-        }
+
 
         #endregion
 
@@ -227,12 +367,7 @@ namespace MatterWorlds.UserInterface
 
         private void TickSpeedBuy_Click(object sender, EventArgs e)
         {
-            if (antimatterCount >= tickSpeedC)
-            {
-                antimatterCount -= tickSpeedC;
-                tickSpeedC *= 10;
-                tickSpeedMult *= tickSpeedMultScale;
-            }
+            InfinityPurchaseControls.TickSpeedUp();
         }
 
         private void galaxyBuy_Click(object sender, EventArgs e)
@@ -247,8 +382,8 @@ namespace MatterWorlds.UserInterface
         private void sacrificeBuy_Click(object sender, EventArgs e)
         {
             if (canSacrifice && sacrificeMultiply >= 1)
-            {
-                sacrifice();
+            { 
+                InfinityPurchaseControls.sacrifice();
             }
         }
 
@@ -258,15 +393,7 @@ namespace MatterWorlds.UserInterface
         {
             if (antimatterCount >= aw1c)
             {
-                antimatterCount -= aw1c;
-
-                aw1++;
-                aw1Bought++;
-                if (aw1Bought % 10 == 0)
-                {
-                    aw1c *= 1000;
-                    aw1m *= 2;
-                }
+                InfinityPurchaseControls.BuyWorld2();
             }
         }
 
@@ -274,15 +401,7 @@ namespace MatterWorlds.UserInterface
         {
             if (antimatterCount >= aw2c)
             {
-                antimatterCount -= aw2c;
-
-                aw2++;
-                aw2Bought++;
-                if (aw2Bought % 10 == 0)
-                {
-                    aw2c *= 10000;
-                    aw2m *= 2;
-                }
+                InfinityPurchaseControls.BuyWorld2();
             }
         }
         
@@ -291,15 +410,7 @@ namespace MatterWorlds.UserInterface
         {
             if (antimatterCount >= aw3c)
             {
-                antimatterCount -= aw3c;
-
-                aw3++;
-                aw3Bought++;
-                if (aw3Bought % 10 == 0)
-                {
-                    aw3c *= 100000;
-                    aw3m *= 2;
-                }
+                InfinityPurchaseControls.BuyWorld3();
             }
         
         }
@@ -308,15 +419,7 @@ namespace MatterWorlds.UserInterface
         {
             if (antimatterCount >= aw4c)
             {
-                antimatterCount -= aw4c;
-
-                aw4++;
-                aw4Bought++;
-                if (aw4Bought % 10 == 0)
-                {
-                    aw4c *= 1000000;
-                    aw4m *= 2;
-                }
+                InfinityPurchaseControls.BuyWorld4();
             }
         }
 
@@ -324,15 +427,7 @@ namespace MatterWorlds.UserInterface
         {
             if (antimatterCount >= aw5c)
             {
-                antimatterCount -= aw5c;
-
-                aw5++;
-                aw5Bought++;
-                if (aw5Bought % 10 == 0)
-                {
-                    aw5c *= 1000000;
-                    aw5m *= 2;
-                }
+                InfinityPurchaseControls.BuyWorld5();
             }
         }
 
@@ -340,15 +435,7 @@ namespace MatterWorlds.UserInterface
         {
             if (antimatterCount >= aw6c)
             {
-                antimatterCount -= aw6c;
-
-                aw6++;
-                aw6Bought++;
-                if (aw6Bought % 10 == 0)
-                {
-                    aw6c *= 100000000;
-                    aw6m *= 2;
-                }
+                InfinityPurchaseControls.BuyWorld6();
             }
         }
 
@@ -356,15 +443,7 @@ namespace MatterWorlds.UserInterface
         {
             if (antimatterCount >= aw7c)
             {
-                antimatterCount -= aw7c;
-
-                aw7++;
-                aw7Bought++;
-                if (aw7Bought % 10 == 0)
-                {
-                    aw7c *= 1000000000;
-                    aw7m *= 2;
-                }
+                InfinityPurchaseControls.BuyWorld7();
             }
         }
 
@@ -372,15 +451,7 @@ namespace MatterWorlds.UserInterface
         {
             if (antimatterCount >= aw8c)
             {
-                antimatterCount -= aw8c;
-
-                aw8++;
-                aw8Bought++;
-                if (aw8Bought % 10 == 0)
-                {
-                    aw8c *= 10000000000;
-                    aw8m *= 2;
-                }
+                InfinityPurchaseControls.BuyWorld8();
             }
         }
 
@@ -394,25 +465,22 @@ namespace MatterWorlds.UserInterface
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            aw7 += aw8 * aw8m * aw8dbm * totalSacrificeMultiply * tickSpeedMult;
-            aw6 += aw7 * aw7m * aw7dbm * tickSpeedMult;
-            aw5 += aw6 * aw6m * aw6dbm * tickSpeedMult;
-            aw4 += aw5 * aw5m* aw5dbm * tickSpeedMult;
-            aw3 += aw4 * aw4m* aw4dbm * tickSpeedMult;
-            aw2 += aw3 * aw3m * aw3dbm * tickSpeedMult;
-            aw1 += aw2 * aw2m* aw2dbm * tickSpeedMult;
-            totalDim1 += aw1;
-            antimatterCount += aw1 * aw1m * aw1dbm;
-
-            sacrificeMultiply = BigDouble.Max(BigDouble.Pow(BigDouble.Log(totalDim1 - previousTotalDim1, 10) / 10, sacrificeExponent), 1);
-            
-            
-
+            TickUpdate.ExecuteTickUpdate();
         }
 
         private void timer2_Tick(object sender, EventArgs e)
         {
             RefreshUI();
+        }
+
+        private void Automator_Tick(object sender, EventArgs e)
+        {
+            AutoBuyers.OnAutobuyerTick();
+        }
+
+        private void UpgradeAutobuyerTickrate()
+        {
+            Dim1Automator.Interval /= 2;
         }
 
 
