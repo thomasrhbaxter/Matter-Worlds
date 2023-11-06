@@ -46,10 +46,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Automation\AutoBuyers.cs" />
+    <Compile Include="Automation\AutoBuyers.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="BigDouble.cs" />
     <Compile Include="Control\InfinityPurchaseControls.cs" />
     <Compile Include="Control\PanelsMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\RefreshUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Control\ResetVariables.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Control\TickUpdate.cs" />

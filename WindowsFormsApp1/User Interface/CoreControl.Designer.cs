@@ -95,7 +95,7 @@ namespace MatterWorlds.Control
             this.panel1.Location = new System.Drawing.Point(20, 28);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(255, 800);
+            this.panel1.Size = new System.Drawing.Size(255, 853);
             this.panel1.TabIndex = 19;
             // 
             // automator_button
@@ -150,13 +150,13 @@ namespace MatterWorlds.Control
             this.panel2.Location = new System.Drawing.Point(298, 60);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(868, 768);
+            this.panel2.Size = new System.Drawing.Size(868, 821);
             this.panel2.TabIndex = 20;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(569, 662);
+            this.label9.Location = new System.Drawing.Point(563, 690);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(51, 20);
             this.label9.TabIndex = 44;
@@ -165,7 +165,7 @@ namespace MatterWorlds.Control
             // galaxyCost
             // 
             this.galaxyCost.AutoSize = true;
-            this.galaxyCost.Location = new System.Drawing.Point(487, 568);
+            this.galaxyCost.Location = new System.Drawing.Point(481, 596);
             this.galaxyCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.galaxyCost.Name = "galaxyCost";
             this.galaxyCost.Size = new System.Drawing.Size(149, 20);
@@ -174,7 +174,10 @@ namespace MatterWorlds.Control
             // 
             // TickSpeedBuy
             // 
-            this.TickSpeedBuy.Location = new System.Drawing.Point(528, 687);
+            this.TickSpeedBuy.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.TickSpeedBuy.FlatAppearance.BorderSize = 2;
+            this.TickSpeedBuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TickSpeedBuy.Location = new System.Drawing.Point(522, 715);
             this.TickSpeedBuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.TickSpeedBuy.Name = "TickSpeedBuy";
             this.TickSpeedBuy.Size = new System.Drawing.Size(279, 58);
@@ -186,7 +189,10 @@ namespace MatterWorlds.Control
             // sacrificeBuy
             // 
             this.sacrificeBuy.Enabled = false;
-            this.sacrificeBuy.Location = new System.Drawing.Point(93, 687);
+            this.sacrificeBuy.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.sacrificeBuy.FlatAppearance.BorderSize = 2;
+            this.sacrificeBuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.sacrificeBuy.Location = new System.Drawing.Point(87, 715);
             this.sacrificeBuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.sacrificeBuy.Name = "sacrificeBuy";
             this.sacrificeBuy.Size = new System.Drawing.Size(210, 58);
@@ -199,7 +205,7 @@ namespace MatterWorlds.Control
             // dimBoostCost
             // 
             this.dimBoostCost.AutoSize = true;
-            this.dimBoostCost.Location = new System.Drawing.Point(41, 568);
+            this.dimBoostCost.Location = new System.Drawing.Point(35, 596);
             this.dimBoostCost.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.dimBoostCost.Name = "dimBoostCost";
             this.dimBoostCost.Size = new System.Drawing.Size(124, 20);
@@ -208,7 +214,10 @@ namespace MatterWorlds.Control
             // 
             // galaxyBuy
             // 
-            this.galaxyBuy.Location = new System.Drawing.Point(492, 592);
+            this.galaxyBuy.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.galaxyBuy.FlatAppearance.BorderSize = 2;
+            this.galaxyBuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.galaxyBuy.Location = new System.Drawing.Point(486, 620);
             this.galaxyBuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.galaxyBuy.Name = "galaxyBuy";
             this.galaxyBuy.Size = new System.Drawing.Size(346, 65);
@@ -219,7 +228,10 @@ namespace MatterWorlds.Control
             // 
             // boostBuy
             // 
-            this.boostBuy.Location = new System.Drawing.Point(31, 592);
+            this.boostBuy.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.boostBuy.FlatAppearance.BorderSize = 2;
+            this.boostBuy.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.boostBuy.Location = new System.Drawing.Point(25, 620);
             this.boostBuy.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.boostBuy.Name = "boostBuy";
             this.boostBuy.Size = new System.Drawing.Size(322, 65);
@@ -240,6 +252,10 @@ namespace MatterWorlds.Control
             // 
             // button1
             // 
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button1.Location = new System.Drawing.Point(599, 35);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button1.Name = "button1";
@@ -261,6 +277,9 @@ namespace MatterWorlds.Control
             // 
             // button8
             // 
+            this.button8.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button8.FlatAppearance.BorderSize = 2;
+            this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Location = new System.Drawing.Point(599, 469);
             this.button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button8.Name = "button8";
@@ -283,6 +302,9 @@ namespace MatterWorlds.Control
             // 
             // button7
             // 
+            this.button7.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button7.FlatAppearance.BorderSize = 2;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button7.Location = new System.Drawing.Point(599, 408);
             this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button7.Name = "button7";
@@ -305,6 +327,9 @@ namespace MatterWorlds.Control
             // 
             // button6
             // 
+            this.button6.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button6.FlatAppearance.BorderSize = 2;
+            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button6.Location = new System.Drawing.Point(599, 343);
             this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button6.Name = "button6";
@@ -328,6 +353,9 @@ namespace MatterWorlds.Control
             // 
             // button5
             // 
+            this.button5.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button5.FlatAppearance.BorderSize = 2;
+            this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Location = new System.Drawing.Point(599, 281);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
@@ -351,6 +379,9 @@ namespace MatterWorlds.Control
             // 
             // button4
             // 
+            this.button4.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button4.FlatAppearance.BorderSize = 2;
+            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Location = new System.Drawing.Point(599, 218);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
@@ -373,6 +404,9 @@ namespace MatterWorlds.Control
             // 
             // button3
             // 
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button3.FlatAppearance.BorderSize = 2;
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(599, 157);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
@@ -395,6 +429,9 @@ namespace MatterWorlds.Control
             // 
             // button2
             // 
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.button2.FlatAppearance.BorderSize = 2;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(599, 95);
             this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button2.Name = "button2";
@@ -416,7 +453,58 @@ namespace MatterWorlds.Control
             // 
             // Dim1Automator
             // 
-            this.Dim1Automator.Tick += new System.EventHandler(this.Automator_Tick);
+            this.Dim1Automator.Interval = 1000;
+            this.Dim1Automator.Tick += new System.EventHandler(this.AutoDim1);
+            // 
+            // Dim2Automater
+            // 
+            this.Dim2Automater.Interval = 1000;
+            this.Dim2Automater.Tick += new System.EventHandler(this.AutoDim2);
+            // 
+            // Dim3Automator
+            // 
+            this.Dim3Automator.Interval = 1000;
+            this.Dim3Automator.Tick += new System.EventHandler(this.AutoDim3);
+            // 
+            // Dim4Automator
+            // 
+            this.Dim4Automator.Interval = 1000;
+            this.Dim4Automator.Tick += new System.EventHandler(this.AutoDim4);
+            // 
+            // Dim5Automator
+            // 
+            this.Dim5Automator.Interval = 1000;
+            this.Dim5Automator.Tick += new System.EventHandler(this.AutoDim5);
+            // 
+            // Dim6Automator
+            // 
+            this.Dim6Automator.Interval = 1000;
+            this.Dim6Automator.Tick += new System.EventHandler(this.AutoDim6);
+            // 
+            // Dim7Automator
+            // 
+            this.Dim7Automator.Interval = 1000;
+            this.Dim7Automator.Tick += new System.EventHandler(this.AutoDim7);
+            // 
+            // Dim8Automator
+            // 
+            this.Dim8Automator.Interval = 1000;
+            this.Dim8Automator.Tick += new System.EventHandler(this.AutoDim8);
+            // 
+            // BoostAutomator
+            // 
+            this.BoostAutomator.Interval = 1000;
+            this.BoostAutomator.Tick += new System.EventHandler(this.AutoBoost);
+            // 
+            // GalaxyAutomator
+            // 
+            this.GalaxyAutomator.Interval = 1000;
+            this.GalaxyAutomator.Tick += new System.EventHandler(this.AutoGalaxy);
+            // 
+            // TickspeedAutomator
+            // 
+            this.TickspeedAutomator.Interval = 1000;
+            this.TickspeedAutomator.Tick += new System.EventHandler(this.AutoTickspeed);
             // 
             // fileSystemWatcher1
             // 
@@ -437,7 +525,7 @@ namespace MatterWorlds.Control
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1194, 842);
+            this.ClientSize = new System.Drawing.Size(1194, 895);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
