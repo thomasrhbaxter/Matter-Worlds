@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace MatterWorlds.Control
 {
-    public partial class CoreControl : Form
+    public partial class CoreControl
     {
 
         public void EternalReset()
