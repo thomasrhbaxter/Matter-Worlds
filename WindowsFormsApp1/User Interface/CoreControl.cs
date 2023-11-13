@@ -383,5 +383,15 @@ namespace MatterWorlds.Control
         {
             RefreshUI();
         }
+
+        private void Save_Click(object sender, EventArgs e)
+        {
+            SaveProcess();
+        }
+
+        private void Load_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

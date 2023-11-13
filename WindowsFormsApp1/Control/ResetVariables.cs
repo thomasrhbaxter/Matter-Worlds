@@ -13,7 +13,6 @@ namespace MatterWorlds.Control
 
         public void EternalReset()
         {
-
             InfiniteReset();
         }
         public void InfiniteReset()

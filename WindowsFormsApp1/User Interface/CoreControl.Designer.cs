@@ -33,6 +33,8 @@ namespace MatterWorlds.Control
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Save = new System.Windows.Forms.Button();
+            this.Loading = new System.Windows.Forms.Button();
             this.automator_button = new System.Windows.Forms.Button();
             this.infinity_button = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -90,12 +92,34 @@ namespace MatterWorlds.Control
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.Save);
+            this.panel1.Controls.Add(this.Loading);
             this.panel1.Controls.Add(this.automator_button);
             this.panel1.Controls.Add(this.infinity_button);
             this.panel1.Location = new System.Drawing.Point(13, 18);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(170, 554);
             this.panel1.TabIndex = 19;
+            // 
+            // Save
+            // 
+            this.Save.Location = new System.Drawing.Point(4, 447);
+            this.Save.Name = "Save";
+            this.Save.Size = new System.Drawing.Size(163, 49);
+            this.Save.TabIndex = 3;
+            this.Save.Text = "Save";
+            this.Save.UseVisualStyleBackColor = true;
+            this.Save.Click += new System.EventHandler(this.Save_Click);
+            // 
+            // Loading
+            // 
+            this.Loading.Location = new System.Drawing.Point(4, 502);
+            this.Loading.Name = "Loading";
+            this.Loading.Size = new System.Drawing.Size(163, 49);
+            this.Loading.TabIndex = 2;
+            this.Loading.Text = "Load";
+            this.Loading.UseVisualStyleBackColor = true;
+            this.Loading.Click += new System.EventHandler(this.Load_Click);
             // 
             // automator_button
             // 
@@ -558,6 +582,8 @@ namespace MatterWorlds.Control
         private System.Windows.Forms.Button automator_button;
         private System.IO.FileSystemWatcher fileSystemWatcher1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button Save;
+        private System.Windows.Forms.Button Loading;
     }
 }
 

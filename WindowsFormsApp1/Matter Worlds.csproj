@@ -60,7 +60,9 @@
     <Compile Include="Control\ResetVariables.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Control\Saving.cs" />
+    <Compile Include="Control\Saving.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Control\TickUpdate.cs" />
     <Compile Include="User Interface\CoreControl.cs">
       <SubType>Form</SubType>
