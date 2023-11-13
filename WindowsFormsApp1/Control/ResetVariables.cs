@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BreakInfinity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -91,12 +92,12 @@ namespace MatterWorlds.Control
 
             aw1c = 10;
             aw2c = 100;
-            aw3c = 1000;
-            aw4c = 10000;
-            aw5c = 100000;
-            aw6c = 1000000;
-            aw7c = 10000000;
-            aw8c = 100000000;
-        }
+            aw3c = 1e4;
+            aw4c = 1e6;
+            aw5c = 1e9;
+            aw6c = 1e13;
+            aw7c = 1e18;
+            aw8c = 1e24;
+    }
     }
 }

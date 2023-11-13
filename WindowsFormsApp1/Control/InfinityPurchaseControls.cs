@@ -53,7 +53,7 @@ namespace MatterWorlds.Control
             CoreControl.aw2Bought++;
             if (CoreControl.aw2Bought % 10 == 0)
             {
-                CoreControl.aw2c *= 1000;
+                CoreControl.aw2c *= 10000;
                 CoreControl.aw2m *= 2;
             }
         }
@@ -66,7 +66,7 @@ namespace MatterWorlds.Control
             CoreControl.aw3Bought++;
             if (CoreControl.aw3Bought % 10 == 0)
             {
-                CoreControl.aw3c *= 1000;
+                CoreControl.aw3c *= 100000;
                 CoreControl.aw3m *= 2;
             }
         }
@@ -79,7 +79,7 @@ namespace MatterWorlds.Control
             CoreControl.aw4Bought++;
             if (CoreControl.aw4Bought % 10 == 0)
             {
-                CoreControl.aw4c *= 1000;
+                CoreControl.aw4c *= 1e6;
                 CoreControl.aw4m *= 2;
             }
         }
@@ -92,7 +92,7 @@ namespace MatterWorlds.Control
             CoreControl.aw5Bought++;
             if (CoreControl.aw5Bought % 10 == 0)
             {
-                CoreControl.aw5c *= 1000;
+                CoreControl.aw5c *= 1e8;
                 CoreControl.aw5m *= 2;
             }
         }
@@ -105,7 +105,7 @@ namespace MatterWorlds.Control
             CoreControl.aw6Bought++;
             if (CoreControl.aw6Bought % 10 == 0)
             {
-                CoreControl.aw6c *= 1000;
+                CoreControl.aw6c *= 1e10;
                 CoreControl.aw6m *= 2;
             }
         }
@@ -118,7 +118,7 @@ namespace MatterWorlds.Control
             CoreControl.aw7Bought++;
             if (CoreControl.aw7Bought % 10 == 0)
             {
-                CoreControl.aw7c *= 1000;
+                CoreControl.aw7c *= 1e12;
                 CoreControl.aw7m *= 2;
             }
         }
@@ -131,7 +131,7 @@ namespace MatterWorlds.Control
             CoreControl.aw8Bought++;
             if (CoreControl.aw8Bought % 10 == 0)
             {
-                CoreControl.aw8c *= 1000;
+                CoreControl.aw8c *= 1e15;
                 CoreControl.aw8m *= 2;
             }
         }

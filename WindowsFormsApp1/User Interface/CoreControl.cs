@@ -42,12 +42,12 @@ namespace MatterWorlds.Control
 
         public static BigDouble aw1c = 10;
         public static BigDouble aw2c = 100;
-        public static BigDouble aw3c = 1000;
-        public static BigDouble aw4c = 10000;
-        public static BigDouble aw5c = 100000;
-        public static BigDouble aw6c = 1000000;
-        public static BigDouble aw7c = 10000000;
-        public static BigDouble aw8c = 100000000;
+        public static BigDouble aw3c = 1e4;
+        public static BigDouble aw4c = 1e6;
+        public static BigDouble aw5c = 1e9;
+        public static BigDouble aw6c = 1e13;
+        public static BigDouble aw7c = 1e18;
+        public static BigDouble aw8c = 1e24;
 
         public static double aw1Bought;
         public static double aw2Bought;
@@ -59,6 +59,8 @@ namespace MatterWorlds.Control
         public static double aw8Bought;
         #endregion
 
+        public static BigDouble galaxystrength = 1;
+
         public static BigDouble totalDim1;
         public static BigDouble previousTotalDim1;
 
@@ -69,7 +71,7 @@ namespace MatterWorlds.Control
         public static int dimBoostsBought;
         public static BigDouble dimBoostC = 0;
 
-        public static int dimGalaxy = 0;
+        public static BigDouble dimGalaxy = 0;
         public static BigDouble dimGalaxyC = 80;
 
         public static string dimBoostsCostString = "20 4th worlds";
@@ -80,6 +82,7 @@ namespace MatterWorlds.Control
         public static BigDouble tickSpeedMultScale = 1.125;
 
         private static string exponentFormat = "G3";
+
         public CoreControl()
         {
             InitializeComponent();
@@ -240,7 +243,22 @@ namespace MatterWorlds.Control
                 {
                     dimGalaxyC = 80 + (dimGalaxy * 60);
                 }
-                tickSpeedMultScale *= 1.02;
+                if (dimGalaxy == 1)
+                {
+                    tickSpeedMultScale = 1 / (1 / 1.1245 - (dimGalaxy * galaxystrength * 0.02));
+                }
+                else if (dimGalaxy == 2)
+                {
+                    tickSpeedMultScale = 1 / (1 / 1.11888888 - (dimGalaxy * galaxystrength * 0.02));
+                }
+                else if (dimGalaxy == 3)
+                {
+                    tickSpeedMultScale = 1 / (1 / 1.11267177 - (dimGalaxy * galaxystrength * 0.02));
+                }
+                else
+                {
+                    tickSpeedMultScale = 1 / (BigDouble.Pow(0.965, (dimGalaxy - 2) * 0.8));
+                }
                 GalaxyReset();
             }
         }
