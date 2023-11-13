@@ -29,11 +29,15 @@ namespace MatterWorlds.Control
             saver.WriteLine(aw8dbm);
 
             saver.WriteLine(button5.Enabled);
+            saver.WriteLine(button5.Visible);
             saver.WriteLine(button6.Enabled);
+            saver.WriteLine(button6.Visible);
             saver.WriteLine(button7.Enabled);
+            saver.WriteLine(button7.Visible);
             saver.WriteLine(button8.Enabled);
+            saver.WriteLine(button8.Visible);
             saver.WriteLine(sacrificeBuy.Enabled);
-
+            
             saver.WriteLine(dimBoostsCostString);
 
             saver.WriteLine(dimBoostC);
@@ -104,9 +108,17 @@ namespace MatterWorlds.Control
             aw8dbm = BigDouble.Parse(reader.ReadLine());
 
             button5.Enabled = Convert.ToBoolean(reader.ReadLine());
+            button5.Visible = Convert.ToBoolean(reader.ReadLine());
+            label5.Visible = button5.Visible;
             button6.Enabled = Convert.ToBoolean(reader.ReadLine());
+            button6.Visible = Convert.ToBoolean(reader.ReadLine());
+            label6.Visible = button6.Visible;
             button7.Enabled = Convert.ToBoolean(reader.ReadLine());
+            button7.Visible = Convert.ToBoolean(reader.ReadLine());
+            label7.Visible = button7.Visible;
             button8.Enabled = Convert.ToBoolean(reader.ReadLine());
+            button8.Visible = Convert.ToBoolean(reader.ReadLine());
+            label8.Visible = button8.Visible;
             sacrificeBuy.Enabled = Convert.ToBoolean(reader.ReadLine());
 
             dimBoostsCostString = reader.ReadLine();

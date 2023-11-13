@@ -78,6 +78,7 @@ namespace MatterWorlds.Control
 
             sacrificeMultiply = 1;
             totalSacrificeMultiply = 1;
+            totalDim1 = 0;
 
 
             aw1m = 1;
