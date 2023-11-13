@@ -35,7 +35,7 @@ namespace MatterWorlds.Control
 
             sacrificeBuy.Text = "Reset  world 1-7 for a " + sacrificeMultiply.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + "x multiplier";
 
-            galaxyCost.Text = "Universe boost cost: " + dimGalaxyC.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " 8th Dimensions";
+            galaxyCost.Text = "Universe boost cost: " + dimGalaxyC.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " 8th worlds";
 
             if (dimBoostsBought >= 7)
             {
@@ -51,7 +51,7 @@ namespace MatterWorlds.Control
             }
             else
             {
-                dimBoostCost.Text = "World boost cost: " + dimBoostC.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " 8th dimensions";
+                dimBoostCost.Text = "World boost cost: " + dimBoostC.ToString(exponentFormat).Replace("+", "").Replace("E0", "E") + " 8th worlds";
             }
             ColourButtons();
         }

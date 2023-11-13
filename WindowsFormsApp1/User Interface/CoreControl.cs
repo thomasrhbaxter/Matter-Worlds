@@ -257,67 +257,98 @@ namespace MatterWorlds.Control
 
         private void buy1_Click(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw1c)
-            {
-                InfinityPurchaseControls.BuyWorld1();
-            }
+                for (int i = 0; i < 10; i++)
+                {
+                if (antimatterCount >= aw1c)
+                {
+                    InfinityPurchaseControls.BuyWorld1();
+                }
+                    
+                }
         }
 
         private void buy2_Click(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw2c)
+            for (int i = 0; i < 10; i++)
             {
-                InfinityPurchaseControls.BuyWorld2();
+                if (antimatterCount >= aw2c)
+                {
+                    InfinityPurchaseControls.BuyWorld2();
+                }
+
             }
         }
         
 
         private void buy3_Click(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw3c)
+            for (int i = 0; i < 10; i++)
             {
-                InfinityPurchaseControls.BuyWorld3();
+                if (antimatterCount >= aw3c)
+                {
+                    InfinityPurchaseControls.BuyWorld3();
+                }
+
             }
-        
         }
 
         private void buy4_Click(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw4c)
+            for (int i = 0; i < 10; i++)
             {
-                InfinityPurchaseControls.BuyWorld4();
+                if (antimatterCount >= aw4c)
+                {
+                    InfinityPurchaseControls.BuyWorld4();
+                }
+
             }
         }
 
         private void buy5_Click(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw5c)
+            for (int i = 0; i < 10; i++)
             {
-                InfinityPurchaseControls.BuyWorld5();
+                if (antimatterCount >= aw5c)
+                {
+                    InfinityPurchaseControls.BuyWorld5();
+                }
+
             }
         }
 
         private void buy6_Click(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw6c)
+            for (int i = 0; i < 10; i++)
             {
-                InfinityPurchaseControls.BuyWorld6();
+                if (antimatterCount >= aw6c)
+                {
+                    InfinityPurchaseControls.BuyWorld6();
+                }
+
             }
         }
 
         private void buy7_Click(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw7c)
+            for (int i = 0; i < 10; i++)
             {
-                InfinityPurchaseControls.BuyWorld7();
+                if (antimatterCount >= aw7c)
+                {
+                    InfinityPurchaseControls.BuyWorld7();
+                }
+
             }
         }
 
         private void buy8_Click(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw8c)
+            for (int i = 0; i < 10; i++)
             {
-                InfinityPurchaseControls.BuyWorld8();
+                if (antimatterCount >= aw8c)
+                {
+                    InfinityPurchaseControls.BuyWorld8();
+                }
+
             }
         }
 
@@ -338,6 +369,5 @@ namespace MatterWorlds.Control
         {
             RefreshUI();
         }
-        
     }
 }

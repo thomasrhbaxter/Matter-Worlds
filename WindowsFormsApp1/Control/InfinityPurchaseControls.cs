@@ -33,15 +33,16 @@ namespace MatterWorlds.Control
 
         public static void BuyWorld1()
         {
-            CoreControl.antimatterCount -= CoreControl.aw1c;
 
-            CoreControl.aw1++;
-            CoreControl.aw1Bought++;
-            if (CoreControl.aw1Bought % 10 == 0)
-            {
-                CoreControl.aw1c *= 1000;
-                CoreControl.aw1m *= 2;
-            }
+                CoreControl.antimatterCount -= CoreControl.aw1c;
+
+                CoreControl.aw1++;
+                CoreControl.aw1Bought++;
+                if (CoreControl.aw1Bought % 10 == 0)
+                {
+                    CoreControl.aw1c *= 1000;
+                    CoreControl.aw1m *= 2;
+                }
         }
 
         public static void BuyWorld2()

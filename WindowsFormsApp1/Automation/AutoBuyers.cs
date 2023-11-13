@@ -16,6 +16,10 @@ namespace MatterWorlds.Control
         {
             if (antimatterCount >= aw1c)
             {
+                for (int i = 0; i >= 10; i++)
+                {
+                    
+                }
                 InfinityPurchaseControls.BuyWorld1();
             }
         }
