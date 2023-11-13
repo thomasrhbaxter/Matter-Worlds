@@ -6,11 +6,7 @@ matter worlds 1-8
 dimboosts
 
 work in progress
-dimsacrifice
-dimgalaxy
-tickspeed upgrades
-
-far future
+Automator
 postinfinity
 break infinity
 new prestige layers (original
