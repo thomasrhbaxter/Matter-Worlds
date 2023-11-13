@@ -20,7 +20,7 @@ namespace MatterWorlds.Control
         {
             dimGalaxy = 0;
             dimGalaxyC = 80;
-            tickSpeedMultScale = 1.125;
+            tickSpeedMultScale = 1 / (1 / 1.1245 - (dimGalaxy * galaxystrength * 0.02));
             GalaxyReset();
         }
 

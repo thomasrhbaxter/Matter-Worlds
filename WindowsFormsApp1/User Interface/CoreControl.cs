@@ -245,13 +245,9 @@ namespace MatterWorlds.Control
                 }
                 if (dimGalaxy == 1)
                 {
-                    tickSpeedMultScale = 1 / (1 / 1.1245 - (dimGalaxy * galaxystrength * 0.02));
-                }
-                else if (dimGalaxy == 2)
-                {
                     tickSpeedMultScale = 1 / (1 / 1.11888888 - (dimGalaxy * galaxystrength * 0.02));
                 }
-                else if (dimGalaxy == 3)
+                else if (dimGalaxy == 2)
                 {
                     tickSpeedMultScale = 1 / (1 / 1.11267177 - (dimGalaxy * galaxystrength * 0.02));
                 }
