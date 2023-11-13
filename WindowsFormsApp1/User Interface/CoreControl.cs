@@ -391,7 +391,7 @@ namespace MatterWorlds.Control
 
         private void Load_Click(object sender, EventArgs e)
         {
-
+            LoadProcess();
         }
     }
 }
