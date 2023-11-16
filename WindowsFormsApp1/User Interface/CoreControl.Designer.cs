@@ -75,9 +75,18 @@ namespace MatterWorlds.Control
             this.TickspeedAutomator = new System.Windows.Forms.Timer(this.components);
             this.fileSystemWatcher1 = new System.IO.FileSystemWatcher();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.autobuyer1 = new System.Windows.Forms.Button();
+            this.autobuyer8 = new System.Windows.Forms.Button();
+            this.autobuyer7 = new System.Windows.Forms.Button();
+            this.autobuyer6 = new System.Windows.Forms.Button();
+            this.autobuyer5 = new System.Windows.Forms.Button();
+            this.autobuyer4 = new System.Windows.Forms.Button();
+            this.autobuyer3 = new System.Windows.Forms.Button();
+            this.autobuyer2 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).BeginInit();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // timer1
@@ -514,10 +523,119 @@ namespace MatterWorlds.Control
             // 
             this.panel3.AutoScroll = true;
             this.panel3.AutoScrollMargin = new System.Drawing.Size(0, 30);
+            this.panel3.Controls.Add(this.autobuyer1);
+            this.panel3.Controls.Add(this.autobuyer8);
+            this.panel3.Controls.Add(this.autobuyer3);
+            this.panel3.Controls.Add(this.autobuyer2);
+            this.panel3.Controls.Add(this.autobuyer7);
+            this.panel3.Controls.Add(this.autobuyer4);
+            this.panel3.Controls.Add(this.autobuyer5);
+            this.panel3.Controls.Add(this.autobuyer6);
             this.panel3.Location = new System.Drawing.Point(199, 39);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(579, 531);
             this.panel3.TabIndex = 45;
+            // 
+            // autobuyer1
+            // 
+            this.autobuyer1.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.autobuyer1.FlatAppearance.BorderSize = 2;
+            this.autobuyer1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autobuyer1.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.autobuyer1.Location = new System.Drawing.Point(416, 34);
+            this.autobuyer1.Name = "autobuyer1";
+            this.autobuyer1.Size = new System.Drawing.Size(139, 34);
+            this.autobuyer1.TabIndex = 45;
+            this.autobuyer1.Text = "Autobuyer1";
+            this.autobuyer1.UseVisualStyleBackColor = true;
+            // 
+            // autobuyer8
+            // 
+            this.autobuyer8.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.autobuyer8.FlatAppearance.BorderSize = 2;
+            this.autobuyer8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autobuyer8.Location = new System.Drawing.Point(416, 316);
+            this.autobuyer8.Name = "autobuyer8";
+            this.autobuyer8.Size = new System.Drawing.Size(139, 34);
+            this.autobuyer8.TabIndex = 52;
+            this.autobuyer8.Text = "autobuyer 8";
+            this.autobuyer8.UseVisualStyleBackColor = true;
+            this.autobuyer8.Visible = false;
+            // 
+            // autobuyer7
+            // 
+            this.autobuyer7.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.autobuyer7.FlatAppearance.BorderSize = 2;
+            this.autobuyer7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autobuyer7.Location = new System.Drawing.Point(416, 276);
+            this.autobuyer7.Name = "autobuyer7";
+            this.autobuyer7.Size = new System.Drawing.Size(139, 34);
+            this.autobuyer7.TabIndex = 51;
+            this.autobuyer7.Text = "autobuyer 7";
+            this.autobuyer7.UseVisualStyleBackColor = true;
+            this.autobuyer7.Visible = false;
+            // 
+            // autobuyer6
+            // 
+            this.autobuyer6.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.autobuyer6.FlatAppearance.BorderSize = 2;
+            this.autobuyer6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autobuyer6.Location = new System.Drawing.Point(416, 234);
+            this.autobuyer6.Name = "autobuyer6";
+            this.autobuyer6.Size = new System.Drawing.Size(139, 34);
+            this.autobuyer6.TabIndex = 50;
+            this.autobuyer6.Text = "autobuyer 6";
+            this.autobuyer6.UseVisualStyleBackColor = true;
+            this.autobuyer6.Visible = false;
+            // 
+            // autobuyer5
+            // 
+            this.autobuyer5.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.autobuyer5.FlatAppearance.BorderSize = 2;
+            this.autobuyer5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autobuyer5.Location = new System.Drawing.Point(416, 194);
+            this.autobuyer5.Name = "autobuyer5";
+            this.autobuyer5.Size = new System.Drawing.Size(139, 34);
+            this.autobuyer5.TabIndex = 49;
+            this.autobuyer5.Text = "autobuyer 5";
+            this.autobuyer5.UseVisualStyleBackColor = true;
+            this.autobuyer5.Visible = false;
+            // 
+            // autobuyer4
+            // 
+            this.autobuyer4.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.autobuyer4.FlatAppearance.BorderSize = 2;
+            this.autobuyer4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autobuyer4.Location = new System.Drawing.Point(416, 153);
+            this.autobuyer4.Name = "autobuyer4";
+            this.autobuyer4.Size = new System.Drawing.Size(139, 34);
+            this.autobuyer4.TabIndex = 48;
+            this.autobuyer4.Text = "autobuyer 4";
+            this.autobuyer4.UseVisualStyleBackColor = true;
+            // 
+            // autobuyer3
+            // 
+            this.autobuyer3.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.autobuyer3.FlatAppearance.BorderSize = 2;
+            this.autobuyer3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autobuyer3.Location = new System.Drawing.Point(416, 113);
+            this.autobuyer3.Name = "autobuyer3";
+            this.autobuyer3.Size = new System.Drawing.Size(139, 34);
+            this.autobuyer3.TabIndex = 47;
+            this.autobuyer3.Text = "autobuyer 3";
+            this.autobuyer3.UseVisualStyleBackColor = true;
+            // 
+            // autobuyer2
+            // 
+            this.autobuyer2.FlatAppearance.BorderColor = System.Drawing.Color.Green;
+            this.autobuyer2.FlatAppearance.BorderSize = 2;
+            this.autobuyer2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.autobuyer2.Location = new System.Drawing.Point(416, 73);
+            this.autobuyer2.Name = "autobuyer2";
+            this.autobuyer2.Size = new System.Drawing.Size(139, 34);
+            this.autobuyer2.TabIndex = 46;
+            this.autobuyer2.Text = "autobuyer 2";
+            this.autobuyer2.UseVisualStyleBackColor = true;
             // 
             // CoreControl
             // 
@@ -526,14 +644,15 @@ namespace MatterWorlds.Control
             this.ClientSize = new System.Drawing.Size(796, 582);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
             this.Name = "CoreControl";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.fileSystemWatcher1)).EndInit();
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -585,6 +704,14 @@ namespace MatterWorlds.Control
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button Save;
         private System.Windows.Forms.Button Loading;
+        private System.Windows.Forms.Button autobuyer1;
+        private System.Windows.Forms.Button autobuyer8;
+        private System.Windows.Forms.Button autobuyer3;
+        private System.Windows.Forms.Button autobuyer2;
+        private System.Windows.Forms.Button autobuyer7;
+        private System.Windows.Forms.Button autobuyer4;
+        private System.Windows.Forms.Button autobuyer5;
+        private System.Windows.Forms.Button autobuyer6;
     }
 }
 

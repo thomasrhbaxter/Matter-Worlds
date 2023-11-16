@@ -9,74 +9,94 @@ using MatterWorlds.Control;
 
 namespace MatterWorlds.Control
 {
-    public partial class CoreControl : Form
+    public partial class CoreControl
     {
 
         private void AutoDim1(object sender, EventArgs e)
-        {
-            if (antimatterCount >= aw1c)
+        {          
+            for (int i = 0; i <= 10; i++)
             {
-                for (int i = 0; i >= 10; i++)
+                if (antimatterCount >= aw1c)
                 {
-                    
+                    InfinityPurchaseControls.BuyWorld1();
                 }
-                InfinityPurchaseControls.BuyWorld1();
-            }
+            }               
         }
 
         private void AutoDim2(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw2c)
+            for (int i = 0; i <= 10; i++)
             {
-                InfinityPurchaseControls.BuyWorld2();
+                if (antimatterCount >= aw2c)
+                {
+                    InfinityPurchaseControls.BuyWorld2();
+                }
             }
         }
 
         private void AutoDim3(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw3c)
+            for (int i = 0; i <= 10; i++)
             {
-                InfinityPurchaseControls.BuyWorld3();
+                if (antimatterCount >= aw3c)
+                {
+                    InfinityPurchaseControls.BuyWorld3();
+                }
             }
         }
 
         private void AutoDim4(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw4c)
+            for (int i = 0; i <= 10; i++)
             {
-                InfinityPurchaseControls.BuyWorld4();
+                if (antimatterCount >= aw4c)
+                {
+                    InfinityPurchaseControls.BuyWorld4();
+                }
             }
         }
 
         private void AutoDim5(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw5c)
+            for (int i = 0; i <= 10; i++)
             {
-                InfinityPurchaseControls.BuyWorld5();
+                if (antimatterCount >= aw5c)
+                {
+                    InfinityPurchaseControls.BuyWorld5();
+                }
             }
         }
 
         private void AutoDim6(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw6c)
+            for (int i = 0; i <= 10; i++)
             {
-                InfinityPurchaseControls.BuyWorld6();
+                if (antimatterCount >= aw6c)
+                {
+                    InfinityPurchaseControls.BuyWorld6();
+                }
             }
         }
 
         private void AutoDim7(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw7c)
+            for (int i = 0; i <= 10; i++)
             {
-                InfinityPurchaseControls.BuyWorld7();
+                if (antimatterCount >= aw7c)
+                {
+                    InfinityPurchaseControls.BuyWorld7();
+                }
             }
         }
 
         private void AutoDim8(object sender, EventArgs e)
         {
-            if (antimatterCount >= aw8c)
+            for (int i = 0; i <= 10; i++)
             {
-                InfinityPurchaseControls.BuyWorld8();
+                if (antimatterCount >= aw8c)
+                {
+                    InfinityPurchaseControls.BuyWorld8();
+                }
             }
         }
 
