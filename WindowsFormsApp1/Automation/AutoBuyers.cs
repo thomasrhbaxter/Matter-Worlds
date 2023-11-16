@@ -14,90 +14,42 @@ namespace MatterWorlds.Control
 
         private void AutoDim1(object sender, EventArgs e)
         {          
-            for (int i = 0; i <= 10; i++)
-            {
-                if (antimatterCount >= aw1c)
-                {
-                    InfinityPurchaseControls.BuyWorld1();
-                }
-            }               
+            BuyWorld1(10);   
         }
 
         private void AutoDim2(object sender, EventArgs e)
         {
-            for (int i = 0; i <= 10; i++)
-            {
-                if (antimatterCount >= aw2c)
-                {
-                    InfinityPurchaseControls.BuyWorld2();
-                }
-            }
+            BuyWorld2(10);
         }
 
         private void AutoDim3(object sender, EventArgs e)
         {
-            for (int i = 0; i <= 10; i++)
-            {
-                if (antimatterCount >= aw3c)
-                {
-                    InfinityPurchaseControls.BuyWorld3();
-                }
-            }
+            BuyWorld3(10);
         }
 
         private void AutoDim4(object sender, EventArgs e)
         {
-            for (int i = 0; i <= 10; i++)
-            {
-                if (antimatterCount >= aw4c)
-                {
-                    InfinityPurchaseControls.BuyWorld4();
-                }
-            }
+            BuyWorld4(10);
         }
 
         private void AutoDim5(object sender, EventArgs e)
         {
-            for (int i = 0; i <= 10; i++)
-            {
-                if (antimatterCount >= aw5c)
-                {
-                    InfinityPurchaseControls.BuyWorld5();
-                }
-            }
+            BuyWorld5(10);
         }
 
         private void AutoDim6(object sender, EventArgs e)
         {
-            for (int i = 0; i <= 10; i++)
-            {
-                if (antimatterCount >= aw6c)
-                {
-                    InfinityPurchaseControls.BuyWorld6();
-                }
-            }
+            BuyWorld6(10);
         }
 
         private void AutoDim7(object sender, EventArgs e)
         {
-            for (int i = 0; i <= 10; i++)
-            {
-                if (antimatterCount >= aw7c)
-                {
-                    InfinityPurchaseControls.BuyWorld7();
-                }
-            }
+            BuyWorld7(10);
         }
 
         private void AutoDim8(object sender, EventArgs e)
         {
-            for (int i = 0; i <= 10; i++)
-            {
-                if (antimatterCount >= aw8c)
-                {
-                    InfinityPurchaseControls.BuyWorld8();
-                }
-            }
+            BuyWorld8(10);
         }
 
         private void AutoBoost(object sender, EventArgs e)
@@ -131,7 +83,7 @@ namespace MatterWorlds.Control
             if (antimatterCount >= tickSpeedC)
             {
                 antimatterCount-=tickSpeedC;
-                InfinityPurchaseControls.TickSpeedUp();
+                TickSpeedUp();
             }
         }
     }

@@ -95,6 +95,7 @@ namespace MatterWorlds.Control
         private void LoadProcess()
         {
             TextReader reader = new StreamReader("Save.txt");
+
             dimGalaxy = BigDouble.Parse(reader.ReadLine());
             dimGalaxyC = BigDouble.Parse(reader.ReadLine());
             tickSpeedMultScale = BigDouble.Parse(reader.ReadLine());

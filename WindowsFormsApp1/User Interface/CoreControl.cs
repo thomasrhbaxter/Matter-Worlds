@@ -221,13 +221,13 @@ namespace MatterWorlds.Control
                     }
                     break;
                 default:
-                    throw new Exception("UNIDENTIFIED DIMBOOST VALUE, THIS SHOULDN'T HAPPEN");             
+                    throw new Exception("DIMBOOST WRONG 4HEAD");             
             }
         }
 
         private void TickSpeedBuy_Click(object sender, EventArgs e)
         {
-            InfinityPurchaseControls.TickSpeedUp();
+            TickSpeedUp();
         }
 
         private void galaxyBuy_Click(object sender, EventArgs e)
@@ -263,7 +263,7 @@ namespace MatterWorlds.Control
         {
             if (canSacrifice && sacrificeMultiply >= 1)
             { 
-                InfinityPurchaseControls.sacrifice();
+                sacrifice();
             }
         }
 
@@ -271,99 +271,50 @@ namespace MatterWorlds.Control
 
         private void buy1_Click(object sender, EventArgs e)
         {
-                for (int i = 0; i < 10; i++)
-                {
-                if (antimatterCount >= aw1c)
-                {
-                    InfinityPurchaseControls.BuyWorld1();
-                }
-                    
-                }
+
+                    BuyWorld1(10);
         }
 
         private void buy2_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                if (antimatterCount >= aw2c)
-                {
-                    InfinityPurchaseControls.BuyWorld2();
-                }
 
-            }
+                    BuyWorld2(10);
+
         }
         
 
         private void buy3_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                if (antimatterCount >= aw3c)
-                {
-                    InfinityPurchaseControls.BuyWorld3();
-                }
 
-            }
+                    BuyWorld3(10);
+
         }
 
         private void buy4_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                if (antimatterCount >= aw4c)
-                {
-                    InfinityPurchaseControls.BuyWorld4();
-                }
-
-            }
+                    BuyWorld4(10);
         }
 
         private void buy5_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                if (antimatterCount >= aw5c)
-                {
-                    InfinityPurchaseControls.BuyWorld5();
-                }
-
-            }
+                    BuyWorld5(10);
         }
 
         private void buy6_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                if (antimatterCount >= aw6c)
-                {
-                    InfinityPurchaseControls.BuyWorld6();
-                }
-
-            }
+                    BuyWorld6(10);
         }
 
         private void buy7_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                if (antimatterCount >= aw7c)
-                {
-                    InfinityPurchaseControls.BuyWorld7();
-                }
-
-            }
+                    BuyWorld7(10);
         }
 
         private void buy8_Click(object sender, EventArgs e)
         {
-            for (int i = 0; i < 10; i++)
-            {
-                if (antimatterCount >= aw8c)
-                {
-                    InfinityPurchaseControls.BuyWorld8();
-                }
 
-            }
+                    BuyWorld8(10);
+
         }
 
 
@@ -392,6 +343,11 @@ namespace MatterWorlds.Control
         private void Load_Click(object sender, EventArgs e)
         {
             LoadProcess();
+        }
+
+        private void button17_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

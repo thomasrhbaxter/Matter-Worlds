@@ -6,133 +6,180 @@ using System.Threading.Tasks;
 
 namespace MatterWorlds.Control
 {
-    internal class InfinityPurchaseControls
+    public partial class CoreControl
     {
         public static void sacrifice()
         {
-            CoreControl.aw1 = 0;
-            CoreControl.aw2 = 0;
-            CoreControl.aw3 = 0;
-            CoreControl.aw4 = 0;
-            CoreControl.aw5 = 0;
-            CoreControl.aw6 = 0;
-            CoreControl.aw7 = 0;
-            CoreControl.previousTotalDim1 = CoreControl.totalDim1;
-            CoreControl.totalSacrificeMultiply *= CoreControl.sacrificeMultiply;
+            aw1 = 0;
+            aw2 = 0;
+            aw3 = 0;
+            aw4 = 0;
+            aw5 = 0;
+            aw6 = 0;
+            aw7 = 0;
+            previousTotalDim1 = totalDim1;
+            totalSacrificeMultiply *= sacrificeMultiply;
         }
 
         public static void TickSpeedUp()
         {
-            if (CoreControl.antimatterCount >= CoreControl.tickSpeedC)
+            if (antimatterCount >= tickSpeedC)
             {
-                CoreControl.antimatterCount -= CoreControl.tickSpeedC;
-                CoreControl.tickSpeedC *= 10;
-                CoreControl.tickSpeedMult *= CoreControl.tickSpeedMultScale;
+                antimatterCount -= tickSpeedC;
+                tickSpeedC *= 10;
+                tickSpeedMult *= tickSpeedMultScale;
             }
         }
 
-        public static void BuyWorld1()
+        public static void BuyWorld1(int number)
         {
-
-                CoreControl.antimatterCount -= CoreControl.aw1c;
-
-                CoreControl.aw1++;
-                CoreControl.aw1Bought++;
-                if (CoreControl.aw1Bought % 10 == 0)
+            for (int i = 0; i < number; i++)
+            {
+                if (antimatterCount >= aw1c)
                 {
-                    CoreControl.aw1c *= 1000;
-                    CoreControl.aw1m *= 2;
+                    antimatterCount -= aw1c;
+
+                    aw1++;
+                    aw1Bought++;
+                    if (aw1Bought % 10 == 0)
+                    {
+                        aw1c *= 1000;
+                        aw1m *= 2;
+                    }
                 }
-        }
-
-        public static void BuyWorld2()
-        {
-            CoreControl.antimatterCount -= CoreControl.aw2c;
-
-            CoreControl.aw2++;
-            CoreControl.aw2Bought++;
-            if (CoreControl.aw2Bought % 10 == 0)
-            {
-                CoreControl.aw2c *= 10000;
-                CoreControl.aw2m *= 2;
             }
         }
 
-        public static void BuyWorld3()
+        public static void BuyWorld2(int number)
         {
-            CoreControl.antimatterCount -= CoreControl.aw3c;
-
-            CoreControl.aw3++;
-            CoreControl.aw3Bought++;
-            if (CoreControl.aw3Bought % 10 == 0)
+            for (int i = 0; i < number; i++)
             {
-                CoreControl.aw3c *= 100000;
-                CoreControl.aw3m *= 2;
+                if (antimatterCount >= aw2c)
+                {
+                    antimatterCount -= aw2c;
+
+                    aw2++;
+                    aw2Bought++;
+                    if (aw2Bought % 10 == 0)
+                    {
+                        aw2c *= 10000;
+                        aw2m *= 2;
+                    }
+                }
             }
         }
 
-        public static void BuyWorld4()
+        public static void BuyWorld3(int number)
         {
-            CoreControl.antimatterCount -= CoreControl.aw4c;
-
-            CoreControl.aw4++;
-            CoreControl.aw4Bought++;
-            if (CoreControl.aw4Bought % 10 == 0)
+            for (int i = 0; i < number; i++)
             {
-                CoreControl.aw4c *= 1e6;
-                CoreControl.aw4m *= 2;
+                if (antimatterCount >= aw3c)
+                {
+                    antimatterCount -= aw3c;
+
+                    aw3++;
+                    aw3Bought++;
+                    if (aw3Bought % 10 == 0)
+                    {
+                        aw3c *= 100000;
+                        aw3m *= 2;
+                    }
+                }
             }
         }
 
-        public static void BuyWorld5()
+        public static void BuyWorld4(int number)
         {
-            CoreControl.antimatterCount -= CoreControl.aw5c;
-
-            CoreControl.aw5++;
-            CoreControl.aw5Bought++;
-            if (CoreControl.aw5Bought % 10 == 0)
+            for (int i = 0; i < number; i++)
             {
-                CoreControl.aw5c *= 1e8;
-                CoreControl.aw5m *= 2;
+                if (antimatterCount >= aw4c)
+                {
+                    antimatterCount -= aw4c;
+
+                    aw4++;
+                    aw4Bought++;
+                    if (aw4Bought % 10 == 0)
+                    {
+                        aw4c *= 1e6;
+                        aw4m *= 2;
+                    }
+                }
             }
         }
 
-        public static void BuyWorld6()
+        public static void BuyWorld5(int number)
         {
-            CoreControl.antimatterCount -= CoreControl.aw6c;
-
-            CoreControl.aw6++;
-            CoreControl.aw6Bought++;
-            if (CoreControl.aw6Bought % 10 == 0)
+            for (int i = 0; i < number; i++)
             {
-                CoreControl.aw6c *= 1e10;
-                CoreControl.aw6m *= 2;
+                if (antimatterCount >= aw5c)
+                {
+                    antimatterCount -= aw5c;
+
+                    aw5++;
+                    aw5Bought++;
+                    if (aw5Bought % 10 == 0)
+                    {
+                        aw5c *= 1e8;
+                        aw5m *= 2;
+                    }
+                }
             }
         }
 
-        public static void BuyWorld7()
+        public static void BuyWorld6(int number)
         {
-            CoreControl.antimatterCount -= CoreControl.aw7c;
-
-            CoreControl.aw7++;
-            CoreControl.aw7Bought++;
-            if (CoreControl.aw7Bought % 10 == 0)
+            for (int i = 0; i < number; i++)
             {
-                CoreControl.aw7c *= 1e12;
-                CoreControl.aw7m *= 2;
+                if (antimatterCount >= aw6c)
+                {
+                    antimatterCount -= aw6c;
+
+                    aw6++;
+                    aw6Bought++;
+                    if (aw6Bought % 10 == 0)
+                    {
+                        aw6c *= 1e10;
+                        aw6m *= 2;
+                    }
+                }
             }
         }
 
-        public static void BuyWorld8()
+        public static void BuyWorld7(int number)
         {
-            CoreControl.antimatterCount -= CoreControl.aw8c;
-
-            CoreControl.aw8++;
-            CoreControl.aw8Bought++;
-            if (CoreControl.aw8Bought % 10 == 0)
+            for (int i = 0; i < number; i++)
             {
-                CoreControl.aw8c *= 1e15;
-                CoreControl.aw8m *= 2;
+                if (antimatterCount >= aw7c)
+                {
+                    antimatterCount -= aw7c;
+
+                    aw7++;
+                    aw7Bought++;
+                    if (aw7Bought % 10 == 0)
+                    {
+                        aw7c *= 1e12;
+                        aw7m *= 2;
+                    }
+                }
+            }
+        }
+
+        public static void BuyWorld8(int number)
+        {
+            for (int i = 0; i < number; i++)
+            {
+                if (antimatterCount >= aw8c)
+                {
+                    antimatterCount -= aw8c;
+
+                    aw8++;
+                    aw8Bought++;
+                    if (aw8Bought % 10 == 0)
+                    {
+                        aw8c *= 1e15;
+                        aw8m *= 2;
+                    }
+                }
             }
         }
     }

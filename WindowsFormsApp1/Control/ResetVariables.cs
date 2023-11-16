@@ -57,7 +57,7 @@ namespace MatterWorlds.Control
             tickSpeedC = 1000;
             tickSpeedMult = 1;
             //antimatterCount = startingAntimatter;
-            antimatterCount = startingAntimatter;
+            antimatterCount = debugAntimatter;
             aw1 = 0;
             aw2 = 0;
             aw3 = 0;
